@@ -43,7 +43,7 @@ package model;
 	            String line;
 	            while ((line = reader.readLine()) != null) {
 	                String nome = line;
-	                int quantidade = Integer.parseInt(reader.readLine());
+	                int quantidade = Integer.parseInt(reader.readLine());	               
 	                Produto produto = new Produto(nome, quantidade);
 	                produtos.add(produto);
 	            }

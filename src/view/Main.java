@@ -31,7 +31,8 @@ public class Main extends EstoqueView{
                     String nomeProduto = scanner.nextLine();
                     System.out.println("Digite a quantidade:");
                     int quantidadeProduto = scanner.nextInt();                    
-                    controller.addProduto(nomeProduto,quantidadeProduto);                  
+                    controller.addProduto(nomeProduto,quantidadeProduto);
+                    view.mostrarProdutos(controller.getProdutos());
                     System.out.println("Produto adicionado com sucesso!");  
                     break;               
                 case 2:
@@ -41,6 +42,7 @@ public class Main extends EstoqueView{
                     int quantidade = scanner.nextInt();
                     scanner.nextLine(); 
                     controller.entradaProduto(produtoNome, quantidade);
+                    view.mostrarProdutos(controller.getProdutos());
                     break;
                 case 3:System.out.println("Digite o nome do produto a ser atualizado:");
                 	String produtoNome1 = scanner.nextLine();
@@ -48,6 +50,7 @@ public class Main extends EstoqueView{
                 	int quantidade1 = scanner.nextInt();
                 	scanner.nextLine(); 
                 	controller.saidaProduto(produtoNome1, quantidade1);
+                	view.mostrarProdutos(controller.getProdutos());
                 	break;
                 case 4:
                 	System.out.println("Estoque arquivado");
